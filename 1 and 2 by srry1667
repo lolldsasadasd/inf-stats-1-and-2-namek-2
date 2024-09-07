@@ -230,7 +230,7 @@ local function doStuff(): ()
     nextPhase = true
 end
 
-while true do task.wait(3.5)
+while true do task.wait(11)
     nextPhase = false
     task.spawn(doStuff)
 
@@ -241,10 +241,10 @@ while true do task.wait(3.5)
                 return
             end
             -- print(os.time() - t)
-        until os.time() - t >= 8
+        until os.time() - t >= 15.5
 
         plr.Character:BreakJoints()
-        task.wait(3.5)
+        task.wait(11)
         nextPhase = true
     end)
 
